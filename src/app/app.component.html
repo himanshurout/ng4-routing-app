@@ -1,0 +1,68 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center;padding-bottom: 20px;">
+  <h1>
+    Angular4 Basic CRUD
+  </h1>
+ 
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-5" style="padding-right: 10px; border-right: 1px solid #CCC;">
+    <h3 style="padding:10px;">User Details</h3>
+    <form>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Name :</label>
+        <div class="col-sm-10">
+          <input type="hidden" name="editIndex" [(ngModel)]="editIndex">
+          <input type="text" class="form-control" [(ngModel)]="user.name" name="name" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Email :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" [(ngModel)]="user.email" name="email" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Phone:</label>
+        <div class="col-sm-10"> 
+          <input type="text" class="form-control" [(ngModel)]="user.phone" name="phone" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+          <button type="button" class="btn btn-primary" (click)="saveUser();">{{buttonText}}</button>
+          <button type="button" class="btn btn-secondary" (click)="resetForm();">Reset</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-sm-12 col-md-7">
+    <h3 style="padding:10px;">List Of Users</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.phone}}</td>
+          <td><button type="button" class="btn btn-primary" (click)="editUser(i, user)">Edit</button></td>
+          <td><button type="button" class="btn btn-danger" (click)="deleteUser(i)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
