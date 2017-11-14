@@ -1,8 +1,8 @@
-# Sample CRUD App using angular4
+# Sample CRUD App showing routing and component communication using angular4
 
 Basic application developed using angular4 for CRUD operation
 
-Live URL - https://himanshurout.github.io/ng4-basic-crud/
+Live URL - https://himanshurout.github.io/ng4-routing-app/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
 
@@ -17,5 +17,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 For github pages:
 
-ng build --prod --base-href "https://himanshurout.github.io/ng4-basic-crud/"
+ng build --prod --base-href "https://himanshurout.github.io/ng4-routing-app/"
 
